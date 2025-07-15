@@ -26,7 +26,7 @@ const defaultQuestions = [
   },
 ];
 
-const FrequentlyAskedQuestionView = ({ from, data }) => {
+export const FrequentlyAskedQuestionView = ({ from, data }) => {
   const [visibleIndexes, setVisibleIndexes] = useState({});
   const [faqs, setFaqs] = useState([]);
   useEffect(() => {
@@ -273,4 +273,3 @@ export const FrequentlyAskedQuestionView3 = ({ from, data }) => {
   );
 };
 
-export default FrequentlyAskedQuestionView;
