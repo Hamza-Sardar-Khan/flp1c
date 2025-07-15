@@ -33,10 +33,7 @@ export default function SpletnaStran() {
 
   const getCompany = async () => {
     try {
-      console.log("user", user);
-      const response = await companyService.getFuneralCompany({
-        userId: user.id,
-      });
+      const response = await companyService.getFuneralCompany({ id: user.id });
       console.log(response);
       if (response.company === null) {
         return;

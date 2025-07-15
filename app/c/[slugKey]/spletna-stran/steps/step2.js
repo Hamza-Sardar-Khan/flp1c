@@ -10,7 +10,6 @@ import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 import companyService from "@/services/company-service";
 import Link from "next/link";
-import CompanyPreview from "../components/company-preview";
 
 export default function Step2({ data, onChange, handleStepChange }) {
   const [offers, setOffers] = useState([
@@ -159,11 +158,25 @@ export default function Step2({ data, onChange, handleStepChange }) {
                 </div>
               </div>
             </div>
-            {companyId && <CompanyPreview companyData={data} />}
+            {companyId && (
+              <Link href={`/floristdetails/${companyId}`} target="blank">
+                <div className="inline-flex gap-[8px] cursor-pointer">
+                  <span className="text-[14px] text-[#3C3E41] leading-[24px]">
+                    Predogled strani
+                  </span>
+                  <Image
+                    src="/external_open.png"
+                    alt="Predogled strani"
+                    width={20}
+                    height={20}
+                    className="shrink-0 w-[20px] h-[20px]"
+                  />
+                </div>
+              </Link>
+            )}
           </div>
           <div className="space-y-[8px]">
-            {/* disable subtitle */}
-            {/* <div className="space-y-[8px] pb-[28px]">
+            <div className="space-y-[8px] pb-[28px]">
               <label className="text-[16px] text-[#3C3E41] font-normal leading-[24px]">
                 Podnaslov{" "}
                 <span className="text-[#ACAAAA]">(pod Naša ponudba)</span>
@@ -175,7 +188,7 @@ export default function Step2({ data, onChange, handleStepChange }) {
                 value={subtitle}
                 onChange={(e) => setSubtitle(e.target.value)}
               />
-            </div> */}
+            </div>
             {offers.map((block) => (
               <SliderBlock
                 key={block.index}

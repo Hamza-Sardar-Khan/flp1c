@@ -48,7 +48,7 @@ const OfficialOpening = () => {
                 </div>
             </div>
 
-            <div className='hidden w-full h-[218px] justify-center items-center'>
+            <div className='hidden mobile:flex w-full h-[218px] justify-center items-center'>
                 <div className='w-[292px] h-[128px] flex flex-col'>
                     <h1 className='text-[#3C3E41] mx-auto text-[28px] leading-[48px] font-variation-customOpt28'>
                         Sodelujmo!

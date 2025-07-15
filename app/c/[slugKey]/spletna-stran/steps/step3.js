@@ -1,11 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import OpenableBlock from "../components/OpenAbleBlock";
+import { BackgroundSelectorStep2 } from "../components/BackgroundSelector";
 import ImageSelector from "../components/ImageSelector";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import packageService from "@/services/pacakge-service";
 import toast from "react-hot-toast";
-import CompanyPreview from "../components/company-preview";
+import Link from "next/link";
 
 export default function Step3({ data, onChange, handleStepChange }) {
   const [packages, setPackages] = useState([
@@ -61,10 +64,6 @@ export default function Step3({ data, onChange, handleStepChange }) {
     }
   }, [data]);
   const addSliderBlock = () => {
-    if (packages?.length >= 8) {
-      toast.error("Dodate lahko največ 8 paketov");
-      return;
-    }
     setPackages([
       ...packages,
       {
@@ -99,7 +98,9 @@ export default function Step3({ data, onChange, handleStepChange }) {
 
       const nonEmptyPackages = packages.filter(
         (currPackage) =>
-          currPackage.title.trim() !== "" && currPackage.image !== null
+          currPackage.title.trim() !== "" &&
+          currPackage.price.trim() !== "" &&
+          currPackage.image !== null
       );
 
       nonEmptyPackages.forEach((currentPackage, index) => {
@@ -109,7 +110,7 @@ export default function Step3({ data, onChange, handleStepChange }) {
 
         // Append default fields
         formData.append(`packages[${index}][title]`, currentPackage.title);
-        formData.append(`packages[${index}][price]`, currentPackage.price || 0);
+        formData.append(`packages[${index}][price]`, currentPackage.price);
 
         if (currentPackage.image) {
           formData.append(`packages[${index}][image]`, currentPackage.image);
@@ -132,7 +133,6 @@ export default function Step3({ data, onChange, handleStepChange }) {
       for (let pair of formData.entries()) {
         console.log(`${pair[0]}:`, pair[1]);
       }
-
       if (nonEmptyPackages.length > 0) {
         const response = await packageService.createPackage(formData);
         const updatedCompany = {
@@ -171,7 +171,22 @@ export default function Step3({ data, onChange, handleStepChange }) {
                 </div>
               </div>
             </div>
-            {companyId && <CompanyPreview companyData={data} />}
+            {companyId && (
+              <Link href={`/floristdetails/${companyId}`} target="blank">
+                <div className="inline-flex gap-[8px] cursor-pointer">
+                  <span className="text-[14px] text-[#3C3E41] leading-[24px]">
+                    Predogled strani
+                  </span>
+                  <Image
+                    src="/external_open.png"
+                    alt="Predogled strani"
+                    width={20}
+                    height={20}
+                    className="shrink-0 w-[20px] h-[20px]"
+                  />
+                </div>
+              </Link>
+            )}
           </div>
           <div className="space-y-[8px]">
             <div className="space-y-[8px] pb-[28px]">

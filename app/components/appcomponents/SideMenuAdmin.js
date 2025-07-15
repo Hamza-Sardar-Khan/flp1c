@@ -23,20 +23,20 @@ const SideMenuAdmin = ({
 
   const menuItems = [
     { text: "Notifications", imgSrc: "/ico_notification_bell.png", path: "#" },
-    { text: "Obituaries", imgSrc: "/ico_user.png", path: "/admin/Obituaries" },
-    { text: "Memory Books", imgSrc: "/ico_funerals.png", path: "/admin/memorybooks" },
+    { text: "Obituaries", imgSrc: "/ico_user.png", path: "/Obituaries" },
+    { text: "Memory Books", imgSrc: "/ico_funerals.png", path: "/memorybook" },
     {
       text: "Funeral Companies",
       imgSrc: "/ico_funeral_comp.png",
-      path: "/admin/funeralcompanies",
+      path: "/funeralcompanydata",
     },
-    { text: "Florists", imgSrc: "/ico_funerals.png", path: "/admin/florists" },
-    { text: "Users", imgSrc: "/user_active_icon.png", imgActive: "/ico_funeral_comp.png", path: "/admin/users" },
-    { text: "Keepers", imgSrc: "/ico_funeral_comp.png", path: "/admin/keepers" },
+    { text: "Florists", imgSrc: "/ico_funerals.png", path: "/floristfirst" },
+    { text: "Users", imgSrc: "/user_active_icon.png", imgActive: "/ico_funeral_comp.png", path: "/admin-user" },
+    { text: "Keepers", imgSrc: "/ico_funeral_comp.png", path: "/keepers" },
     {
       text: "Financials",
       imgSrc: "/ico_cursor.png",
-      path: "/admin/financials",
+      path: "/adminfinancialsoverview",
     },
     {
       text: "Permissions",

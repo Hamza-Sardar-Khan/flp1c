@@ -1,5 +1,5 @@
 "use client";
-import { React, useState, useEffect, useMemo } from "react";
+import { React, useState, useEffect } from "react";
 import Link from "next/link";
 import imgFb from "@/public/img_fb1.png";
 import imgInsta from "@/public/img_insta.png";
@@ -37,7 +37,6 @@ const SunflowerFlorist = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    console.log("handlePrev");
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? shops.length - 1 : prevIndex - 1
     );
@@ -49,11 +48,13 @@ const SunflowerFlorist = ({ data }) => {
     );
   };
 
-  const shops = data?.shops || [];
+  const [shops, setShops] = useState([]);
 
-  const currentShop = useMemo(() => {
-    return shops[currentIndex] || {};
-  }, [currentIndex, shops]);
+  useEffect(() => {
+    if (data?.shops && data?.shops.length > 0) {
+      setShops(data.shops);
+    }
+  }, [data]);
 
   return (
     <div className="bg-white desktop:bg-[#EDF1F3]">
@@ -68,15 +69,13 @@ const SunflowerFlorist = ({ data }) => {
 
         <button
           onClick={handlePrev}
-          className={
-            "hidden desktop:flex self-center my-auto translate-x-[80px]"
-          }
+          className={"hidden desktop:flex self-center my-auto mr-[-80px] "}
         >
           <img src="/img_back.png" alt="Next" className="h-[40px] w-[17px]" />
         </button>
         {/* First detail Container for heading and flower image */}
         <div
-          key={`${data?.id}-${currentIndex}-${currentShop?.id}`}
+          key={`${data?.id}-${currentIndex}`}
           className="max-w-[596px] w-full mobile:w-full tablet:h-full desktop:h-full mobile:mx-auto items-center flex flex-col"
         >
           <div className="text-[#1E2125] mobile:hidden text-[40px] mt-[58px] tablet:mt-[34px] leading-[46.88px] font-variation-customOpt40">
@@ -116,7 +115,7 @@ const SunflowerFlorist = ({ data }) => {
 
           <div className="flex flex-row">
             <Image
-              key={`${data?.id}-${currentIndex}-logo-${currentShop?.id}`}
+              key={`${data?.id}-${currentIndex}-logo-${data?.logo}`}
               src={getLogo(data?.logo)}
               alt="sunflower_img"
               width={370}
@@ -176,20 +175,20 @@ const SunflowerFlorist = ({ data }) => {
             {/* Container for telephone mail and other texts */}
             <div className="w-[274px] h-[115px] flex flex-col">
               <div className="text-[#000000] leading-[18.75px] text-[16px] font-variation-customOpt16">
-                {currentShop?.shopName || "Cvetličarna št.1"}
+                {shops[currentIndex]?.shopName || "Cvetličarna št.1"}
               </div>
 
               <div className="text-[#414141] italic text-[16px] mt-[8px] font-[400px] leading-[24px] tablet:font-variation-customOpt16 desktop:font-variation-customOpt16">
-                {currentShop?.address ||
+                {shops[currentIndex]?.address ||
                   "Zidarska ulica 184, Ljubno ob Savinji"}
               </div>
 
               <div className="font-variation-customOpt16 mt-[8px] italic text-[16px] leading-[24px] text-[#414141]">
-                Tel. {currentShop?.telephone || "012-994-285"}
+                Tel. {shops[currentIndex]?.telephone || "012-994-285"}
               </div>
 
               <div className="text-[16px] italic text-[#414141] leading-[24px] mt-[8px] font-variation-customOpt16">
-                Email: {currentShop?.email || "trgovina@csunflo.com"}
+                Email: {shops[currentIndex]?.email || "trgovina@csunflo.com"}
               </div>
             </div>
 
@@ -198,19 +197,19 @@ const SunflowerFlorist = ({ data }) => {
               <div className="text-[#000000] leading-[18.75px] text-[16px] font-variation-customOpt16">
                 Delovni čas
               </div>
-              {currentShop?.hours ? (
+              {shops[currentIndex]?.hours ? (
                 <>
                   <div className="text-[#414141] italic text-[16px] mt-[8px] leading-[24px] font-variation-customOpt16">
-                    {currentShop?.hours}
+                    {shops[currentIndex]?.hours}
                   </div>
                   <div className="text-[#414141] italic text-[16px] mt-[8px] leading-[24px] font-variation-customOpt16">
-                    {currentShop?.secondaryHours}
+                    {shops[currentIndex]?.secondaryHours}
                   </div>
                   <div className="text-[#414141] italic text-[16px] mt-[8px] leading-[24px] font-variation-customOpt16">
-                    {currentShop?.tertiaryHours}
+                    {shops[currentIndex]?.tertiaryHours}
                   </div>
                   <div className="text-[#414141] italic text-[16px] mt-[8px] leading-[24px] font-variation-customOpt16">
-                    {currentShop?.quaternaryHours}
+                    {shops[currentIndex]?.quaternaryHours}
                   </div>
                 </>
               ) : (

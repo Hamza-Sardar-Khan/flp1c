@@ -10,7 +10,6 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import companyService from "@/services/company-service";
 import Link from "next/link";
-import FuneralCompanyPreview from "../components/funeral-company-preview";
 
 export default function Step4({ data, onChange, handleStepChange }) {
   const [companyId, setCompanyId] = useState(null);
@@ -100,7 +99,22 @@ export default function Step4({ data, onChange, handleStepChange }) {
                 </div>
               </div>
             </div>
-            {companyId && <FuneralCompanyPreview company={data} />}
+            {companyId && (
+              <Link href={`/funeralcompany/${companyId}`} target="blank">
+                <div className="inline-flex gap-[8px] cursor-pointer">
+                  <span className="text-[14px] text-[#3C3E41] leading-[24px]">
+                    Predogled strani
+                  </span>
+                  <Image
+                    src="/external_open.png"
+                    alt="Predogled strani"
+                    width={20}
+                    height={20}
+                    className="shrink-0 w-[20px] h-[20px]"
+                  />
+                </div>
+              </Link>
+            )}
           </div>
           <div className="space-y-[8px]">
             <div className="space-y-[16px]">
@@ -112,8 +126,8 @@ export default function Step4({ data, onChange, handleStepChange }) {
                   type="text"
                   className="w-full border border-[#6D778E] bg-[#FFFFFF] outline-none rounded-[8px] py-[12px] px-[20px] text-[16px] text-[#3C3E41] placeholder:text-[#ACAAAA] leading-[24px]"
                   placeholder="Naš ponos"
-                  value={secondaryTitle}
-                  onChange={(e) => setSecondaryTitle(e.target.value)}
+                  value={secondaryDescription}
+                  onChange={(e) => setSecondaryDescription(e.target.value)}
                 />
               </div>
               <div className="space-y-[8px]">
@@ -124,8 +138,8 @@ export default function Step4({ data, onChange, handleStepChange }) {
                   type="text"
                   className="w-full border border-[#6D778E] bg-[#FFFFFF] outline-none rounded-[8px] py-[12px] px-[20px] text-[16px] text-[#3C3E41] placeholder:text-[#ACAAAA] leading-[24px]"
                   placeholder="Projekt prenove trboveljskega pokopališča je bil leta"
-                  value={secondaryDescription}
-                  onChange={(e) => setSecondaryDescription(e.target.value)}
+                  value={secondaryTitle}
+                  onChange={(e) => setSecondaryTitle(e.target.value)}
                 />
               </div>
               <div className="space-y-[8px]">

@@ -114,7 +114,7 @@ function ObituaryHeader({ from }) {
                       <Link
                         href={"/osmrtnice"}
                         className={`font-normal  hover:text-blue-500  transition duration-200 tablet:text-[18px] desktop:text-[20px] ${
-                          pathname == "/resitve-za-pogrebna-podjetja"
+                          pathname == "/resitive-za-pogrebna-podjetja"
                             ? "!text-[#0A85C2] underline"
                             : "text-[#1E2125]"
                         }`}
@@ -126,7 +126,7 @@ function ObituaryHeader({ from }) {
                       <Link
                         href={"/cvetlicarne"}
                         className={`font-normal  hover:text-blue-500  transition duration-200 tablet:text-[18px] desktop:text-[20px] ${
-                          pathname == "/resitve-za-cvetlicarne"
+                          pathname == "/resitive-za-cvetlicarne"
                             ? "!text-[#0A85C2] underline"
                             : "text-[#1E2125]"
                         }`}

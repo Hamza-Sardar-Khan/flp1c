@@ -28,8 +28,14 @@ const Cemeteries = ({ data }) => {
     setCompanyId(data.id);
     const customCemeteries = data?.cemeteries || [];
 
-    if (customCemeteries.length) {
+    if (customCemeteries.length > 3) {
       setCemeteries(customCemeteries);
+    } else if (customCemeteries.length > 0) {
+      const updatedList = [...defaultCemeteries];
+      for (let i = 0; i < customCemeteries.length; i++) {
+        updatedList[i] = customCemeteries[i];
+      }
+      setCemeteries(updatedList);
     } else {
       setCemeteries(defaultCemeteries);
     }
@@ -147,10 +153,10 @@ const Cemeteries = ({ data }) => {
             {cemeteries &&
               cemeteries?.map((cemetery, index) => (
                 <li
-                  key={`${cemetery.id}-cemetery-${index}-${cemetery.companyId}`}
+                  key={index}
                   className="text-[16px] text-[#414141] font-variation-customOpt16 pl-[6px]"
                 >
-                  {cemetery.name} v {cemetery.address}
+                  {cemetery.name} v {cemetery.address}, {cemetery.city}
                 </li>
               ))}
           </ol>

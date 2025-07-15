@@ -15,8 +15,8 @@ import MemoralPopup from "./MemoralPopup";
 import Link from "next/link";
 
 const promoPathname = [
-  "/resitve-za-pogrebna-podjetja",
-  "/resitve-za-cvetlicarne",
+  "/resitive-za-pogrebna-podjetja",
+  "/resitive-za-cvetlicarne",
   "/zalna-stran",
   "/spominska"
 ]
@@ -490,7 +490,7 @@ export function FooterForFaq() {
         <div className="inline-flex gap-[10px] mobile:gap-[8px] text-[14px] items-center mobile:justify-center mobile:w-full">
           <Link href="/" className="text-[#DAEBF1] ">Začetna</Link>
           <div className="w-[5px] h-[5px] bg-[#DAEBF1] rounded-full"></div>
-          <Link href="/resitve-za-pogrebna-podjetja" className="text-[#DAEBF1] ">Stran za pogrebna podjetja</Link>
+          <Link href="/resitive-za-pogrebna-podjetja" className="text-[#DAEBF1] ">Stran za pogrebna podjetja</Link>
           <div className="w-[5px] h-[5px] bg-[#DAEBF1] rounded-full"></div>
           <Link href="/c-priloznost" className="text-[#DAEBF1] ">Cvetličarne </Link>
         </div>
@@ -527,8 +527,8 @@ export function FooterForFaq2() {
         <div className="inline-flex gap-[10px] mobile:gap-[8px] text-[14px] items-center mobile:justify-center mobile:w-full">
           <Link href="/" className="text-[#DAEBF1]  underline">Prva stran</Link>
           <div className="w-[5px] h-[5px] bg-[#DAEBF1] rounded-full underline"></div>
-          <Link href="/resitve-za-cvetlicarne" className="text-[#DAEBF1] mobile:hidden underline">Stran za cvetličarne</Link>
-          <Link href="/resitve-za-cvetlicarne" className="text-[#DAEBF1] mobile:block hidden underline">Cvetličarne</Link>
+          <Link href="/resitive-za-cvetlicarne" className="text-[#DAEBF1] mobile:hidden underline">Stran za cvetličarne</Link>
+          <Link href="/resitive-za-cvetlicarne" className="text-[#DAEBF1] mobile:block hidden underline">Cvetličarne</Link>
           <div className="w-[5px] h-[5px] bg-[#DAEBF1] rounded-full underline"></div>
           <Link href="/p-faq" className="text-[#DAEBF1]  underline">Pogrebna podjetja</Link>
         </div>

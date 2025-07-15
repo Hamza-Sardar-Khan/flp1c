@@ -20,19 +20,19 @@ const HomeBackHeader = () => {
             head={"OSMRTNICE"}
             index={"01."}
             id={1}
-            endPoint={"/osmrtnice"}
+            endPoint={"/obituarylist"}
           />
           <HeaderHeadingTextMobile
             head={"POGREBI"}
             index={"02."}
             id={2}
-            endPoint={"/pogrebi"}
+            endPoint={""}
           />
           <HeaderHeadingTextMobile
             head={"SPOMINSKA"}
             index={"03."}
             id={3}
-            endPoint={"/osmrtnice"}
+            endPoint={"/obituarylist"}
           />
           <HeaderHeadingTextMobile
             head={"CVETLIČARNE"}
@@ -47,19 +47,19 @@ const HomeBackHeader = () => {
           head={"OSMRTNICE"}
           index={"01."}
           id={1}
-          endPoint={"/osmrtnice"}
+          endPoint={"/obituarylist"}
         />
         <HeaderHeadingText
           head={"POGREBI"}
           index={"02."}
           id={2}
-          endPoint={"/pogrebi"}
+          endPoint={""}
         />
         <HeaderHeadingText
           head={"SPOMINSKA"}
           index={"03."}
           id={3}
-          endPoint={"/osmrtnice"}
+          endPoint={"/obituarylist"}
         />
         <HeaderHeadingText
           head={"CVETLIČARNE"}
@@ -73,19 +73,19 @@ const HomeBackHeader = () => {
           head={"OSMRTNICE"}
           index={"01."}
           id={1}
-          endPoint={"/osmrtnice"}
+          endPoint={"/obituarylist"}
         />
         <HeaderHeadingTextTablet
           head={"POGREBI"}
           index={"02."}
           id={2}
-          endPoint={"/pogrebi"}
+          endPoint={""}
         />
         <HeaderHeadingTextTablet
           head={"SPOMINSKA"}
           index={"03."}
           id={3}
-          endPoint={"/osmrtnice"}
+          endPoint={"/obituarylist"}
         />
         <HeaderHeadingTextTablet
           head={"CVETLIČARNE"}
