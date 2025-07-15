@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 const SlideOne = () => {
@@ -26,10 +27,12 @@ const SlideOne = () => {
               <p className="text-[20px] font-medium mt-[16px]">
                 Vse navedeno je BREZPLAČNO.
               </p>
-
+              
+              <Link href={"/zalna-stran"}>
               <button className="shadow-custom-light-dark bg-gradient-to-br from-[#E3E8EC] to-[#FFFFFF] px-[25px] py-[12px] rounded-[8px] mt-[81px] w-[175px]">
                 Več o žalni strani
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -60,10 +63,12 @@ const SlideOne = () => {
               <p className="text-[20px] font-medium mt-[16px]">
                 Vse navedeno je BREZPLAČNO.
               </p>
-
+              
+              <Link href={"/zalna-stran"}>
               <button class="shadow-custom-light-dark bg-gradient-to-br from-[#E3E8EC] to-[#FFFFFF] px-[25px] py-[12px] rounded-[8px] mt-[81px] max-w-[175px]">
                 Več o žalni strani
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -93,10 +98,12 @@ const SlideOne = () => {
               src="/mobile-cards/iPad Landscape.png"
               alt="iPad Landscape"
             />
-          </div>
+          </div>        
+          <Link href={"/zalna-stran"}>
           <button class="px-[25px] rounded-[8px] py-[12px] shadow-custom-light-dark bg-gradient-to-br from-[#E3E8EC] to-[#FFFFFF]">
             Več o žalni strani
           </button>
+          </Link>
         </div>
       </div>
     );
@@ -119,10 +126,12 @@ const SlideOne = () => {
           </div>
           <div className="image-container flex justify-center">
             <img src="/mobile-cards/iPad Landscape.png" alt="iPad Landscape" className=" h-[613px]  object-fill" />
-          </div>
+          </div >         
+          <Link href={"/zalna-stran"}>
           <button class="px-[25px] rounded-[8px] py-[12px] shadow-custom-light-dark bg-gradient-to-br from-[#E3E8EC] to-[#FFFFFF]">
             Več o žalni strani
           </button>
+          </Link>
         </div>
       </div>
     );

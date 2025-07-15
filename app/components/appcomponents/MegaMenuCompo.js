@@ -391,7 +391,7 @@ const MegaMenuCompo = ({ setActiveButton }) => {
             </div>
 
             {/* 6th title contianer */}
-            <Link href={"/resitive-za-cvetlicarne"}>
+            <Link href={"/resitve-za-cvetlicarne"}>
               <div className="flex flex-row items-center mt-[14px]">
                 <div className="text-[12px] font-normal text-[#41C0FF] leading-[22px] mr-[10px]">
                   Več o promociji

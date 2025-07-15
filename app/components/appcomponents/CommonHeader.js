@@ -36,14 +36,14 @@ import TopBar from "./TopBar";
       { label: "Žalna stran", path: "/zalna-stran", active : false },
       { label: " Spominska", path: "/spominska", active : false },
     ],
-    "/resitive-za-cvetlicarne": [
-      { label: "Cvetličarne", path: "/resitive-za-cvetlicarne", active : false },
+    "/resitve-za-cvetlicarne": [
+      { label: "Cvetličarne", path: "/resitve-za-cvetlicarne", active : false },
       { label: " PRILOŽNOST", path: "/c-priloznost", active : true },
-      { label: "Pogrebna podjetja", path: "/resitive-za-pogrebna-podjetja", active : false },
+      { label: "Pogrebna podjetja", path: "/resitve-za-pogrebna-podjetja", active : false },
     ],
-    "/resitive-za-pogrebna-podjetja": [
-      { label: "Cvetličarne", path: "/resitive-za-cvetlicarne", active : false },
-      { label: "Pogrebna podjetja", path: "/resitive-za-pogrebna-podjetja", active : false },
+    "/resitve-za-pogrebna-podjetja": [
+      { label: "Cvetličarne", path: "/resitve-za-cvetlicarne", active : false },
+      { label: "Pogrebna podjetja", path: "/resitve-za-pogrebna-podjetja", active : false },
       { label: " PRILOŽNOST", path: "/p-priloznost", active : true },
     ],
   };

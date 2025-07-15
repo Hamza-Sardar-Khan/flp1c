@@ -50,16 +50,16 @@ const footerLinkSets = {
     { label: "Spominske", path: "/osmrtnice " , showOnMobile: true  },
     { label: "Cvetličarne", path: "/cvetlicarne  " , showOnMobile: true  },
   ],
-  "/resitive-za-cvetlicarne": [
+  "/resitve-za-cvetlicarne": [
     { label: "Začetna ", path: "/ " , showOnMobile: false  },
-    { label: "Cvetličarne", path: "/resitive-za-cvetlicarne " , showOnMobile: true  },
+    { label: "Cvetličarne", path: "/resitve-za-cvetlicarne " , showOnMobile: true  },
     { label: "Priložnost", path: "/c-priloznost " , showOnMobile: true  },
-    { label: "Pogrebna", path: "/resitive-za-pogrebna-podjetja " , showOnMobile: true  },
+    { label: "Pogrebna", path: "/resitve-za-pogrebna-podjetja " , showOnMobile: true  },
   ],
-    "/resitive-za-pogrebna-podjetja": [
+    "/resitve-za-pogrebna-podjetja": [
     { label: "Začetna ", path: "/ " , showOnMobile: false  },
-    { label: "Cvetličarne", path: "/resitive-za-cvetlicarne " , showOnMobile: true  },
-    { label: "Pogrebna", path: "/resitive-za-pogrebna-podjetja " , showOnMobile: true  },
+    { label: "Cvetličarne", path: "/resitve-za-cvetlicarne " , showOnMobile: true  },
+    { label: "Pogrebna", path: "/resitve-za-pogrebna-podjetja " , showOnMobile: true  },
     { label: "Priložnost", path: "/p-priloznost " , showOnMobile: true  },
   ],
 };

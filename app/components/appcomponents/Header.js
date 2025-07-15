@@ -68,7 +68,7 @@ export function FAQHeader() {
   return (
     <header className="flex flex-col fixed h-[92px] mobile:h-[55px] tablet:h-[80px] left-0 right-0 shadow-md z-50 bg-[#FFFFFF]">
       <div className="desktop:w-[1200px] w-full tablet:max-w-[700px] tablet:w-full mobile:max-w-[400px] mobile:w-full flex justify-between h-full items-center mx-auto">
-        <Link href={"/resitive-za-pogrebna-podjetja"} className="flex">
+        <Link href={"/resitve-za-pogrebna-podjetja"} className="flex">
           <Image
             src={omr}
             alt="App Logo"
@@ -102,7 +102,7 @@ export function FAQHeader() {
             />
           </Link>
         </div>
-        <Link href={"/resitive-za-cvetlicarne"} className="hidden mobile:flex">
+        <Link href={"/resitve-za-cvetlicarne"} className="hidden mobile:flex">
           <Image
             src={"/faq_header_top.png"}
             alt="Menu"
@@ -153,7 +153,7 @@ export function FAQHeader2() {
             />
           </Link>
         </div>
-        <Link href={"/resitive-za-pogrebna-podjetja"} className="hidden mobile:flex">
+        <Link href={"/resitve-za-pogrebna-podjetja"} className="hidden mobile:flex">
           <Image
             src={"/faq_header_top.png"}
             alt="Menu"
